@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my music</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css"></link>
+  </head>
+  <body ng-app="music" >
+    <br>
+    <div class="container" ng-controller="musiclist" class="container">
+      <center>
+        <form id        =  "uploadForm"
+        enctype   =  "multipart/form-data"
+        action    =  "/upload_image"
+        method    =  "post">
+      <input type="file" name="avatar" accept="audio/*"></input>
+      <input type="submit" class="btn btn-primary">
+
+    </form>
+
+
+      <br>
+
+       <hr>
+       <marquee>{{currentsong}}</marquee>
+       <hr>
+
+         <button class="btn btn-primary" ng-click="pause()">STOP</button>
+         <br><br>
+
+
+
+
+      </center>
+
+      <ul class="musiclist" >
+        <li ng-repeat="songs in list"  >{{songs}} <button class=" btn  btn-primary" ng-click="clickme(songs)">play</button></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+  </body>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="index.js"></script>
+</html>

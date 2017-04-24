@@ -1,0 +1,24 @@
+.musiclist li{
+
+  height: 50px;
+  padding: 16px;
+  color:white;
+  vertical-align: middle;
+}
+
+.musiclist li button{
+  float: right;
+  position: relative;
+  right: 100px;
+  top:-6px;
+}
+
+
+.musiclist li:nth-child(odd) {
+background-color: #28b148;
+}
+
+.musiclist li:nth-child(even) {
+
+background-color: #22422d;
+}

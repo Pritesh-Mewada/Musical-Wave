@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my music</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css"></link>
+  </head>
+  <body ng-app="music" >
+    <div class="container">
+
+     <div ng-controller="musiclist">
+      <ul class="musiclist" >
+        <div ng-repeat="songs in list">
+          <span>{{songs}}</span><br><audio controls>
+
+            <source src={{"/public/"+songs}} type="audio/mpeg">
+
+            </audio>
+
+
+        </div>
+
+
+      </ul>
+    </div>
+
+
+    </div>
+
+
+  </body>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="audio.js"></script>
+</html>
