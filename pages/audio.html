@@ -12,9 +12,10 @@
      <div ng-controller="musiclist">
       <ul class="musiclist" >
         <div ng-repeat="songs in list">
-          <span>{{songs}}</span><br><audio controls>
+          <span>{{songs}}</span><br>
+          <audio controls>
 
-            <source src={{"/public/"+songs}} type="audio/mpeg">
+            <source src={{"/"+songs}} type="audio/mpeg">
 
             </audio>
 

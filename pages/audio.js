@@ -5,7 +5,7 @@ app.controller('musiclist',function($scope,$http){
   var list;
   $http({
     method: 'GET',
-    url: '/audio'
+    url: '/allfiles'
   }).then(function successCallback(response) {
 
     $scope.list = response.data;
